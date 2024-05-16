@@ -29,6 +29,8 @@ import org.springframework.util.StringValueResolver;
  * properties file or other {@linkplain org.springframework.core.env.PropertySource
  * property source} into bean definitions.
  *
+ * 用于解析 bean 定义属性值中的占位符
+ *
  * <p>The default placeholder syntax follows the Ant / Log4J / JSP EL style:
  *
  * <pre class="code">${...}</pre>

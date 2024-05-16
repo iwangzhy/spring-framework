@@ -1769,6 +1769,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 	 */
 	@SuppressWarnings("deprecation")
 	protected Object initializeBean(String beanName, Object bean, @Nullable RootBeanDefinition mbd) {
+		// 在这个方法里面判断 bean 是否实现了 Aware 接口
 		invokeAwareMethods(beanName, bean);
 
 		Object wrappedBean = bean;

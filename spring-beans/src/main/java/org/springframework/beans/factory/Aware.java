@@ -22,6 +22,11 @@ package org.springframework.beans.factory;
  * The actual method signature is determined by individual subinterfaces but should
  * typically consist of just one void-returning method that accepts a single argument.
  *
+ * 一个标记接口。 Spring 容器可以通过回调式方法通知某个 bean。
+ * <strong> 可以让 bean 获取到 Spring 容器的某个特定对象。</strong>
+ * 例如 ApplicationContextAware 可以让 bean 获取到 ApplicationContext 对象。
+ * EnvironmentAware 可以让 bean 获取到 Environment 对象。
+ *
  * <p>Note that merely implementing {@link Aware} provides no default functionality.
  * Rather, processing must be done explicitly, for example in a
  * {@link org.springframework.beans.factory.config.BeanPostProcessor}.

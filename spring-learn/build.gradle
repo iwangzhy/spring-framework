@@ -1,0 +1,24 @@
+plugins {
+	id("java")
+}
+
+group = "org.springframework"
+version = "6.2.0-SNAPSHOT"
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation('org.springframework:spring-context:6.2.0-SNAPSHOT')
+//	implementation project(path: 'spring-context')
+	implementation project(path: 'spring-beans')
+	implementation project(path: 'spring-core')
+	implementation project(path: 'spring-aop')
+	compileOnly 'org.projectlombok:lombok:1.18.20'
+	annotationProcessor 'org.projectlombok:lombok:1.18.20'
+}
+
+tasks.test {
+	useJUnitPlatform()
+}
